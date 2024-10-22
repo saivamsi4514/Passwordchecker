@@ -1,0 +1,117 @@
+:root{
+    --primary:#4268ff;
+    --secondary:#6f7e8c;
+    --hover:#f5f5f5;
+    --text:#212121;
+
+}
+body{
+    font-family: 'Roboto',sans-serif;
+    font-size:14px;
+    background:var(--primary);
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    padding-top: 10rem;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+.box{
+    background: white;
+    padding:1.5rem;
+    border-radius:1rem;
+    max-width: 26rem;
+}
+.box h2{
+    margin:0;
+    font-weight:400;
+    font-size:1.5rem;
+}
+.input_wrapper{
+    position:relative;
+    padding:1rem 0 0;
+}
+.input_icon {
+    width: 20px;
+    height: 20px;
+}
+.input_field{
+    border:0;
+    border-bottom: 2px solid var(--secondary);
+    outline:0;
+    font-size:1rem;
+    color:var(--text);
+    padding:0.25rem 0px;
+    padding-right: 2rem;
+    background:transparent;
+    transition: border-color 0.2s;
+}
+.input_field::placeholder{
+    color:transparent;
+}
+.input_field::placeholder-shown~.input_field{
+    font-size:1rem;
+    cursor:text;
+    color:var(--secondary);
+    top:1.25rem;
+}
+label, .input_field:focus~.input_label{
+    color:var(--primary);
+}
+.input_filed:focus{
+    border-bottom: 2px solid var(--primary);
+}
+.input_item{
+    position:absolute;
+    bottom: -0.6875rem;
+    right:-0.85rem;
+    width:1.625rem;
+    height:1.625rem;
+    padding:0.125rem;
+    transform:translate(-50%,-50%);
+    transform-origin: center;
+    cursor:pointer;
+}
+.input_icon:hover{
+    border-radius: 50%;
+    background: var(--hover);
+}
+.password-strength{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction:column;
+    margin-top: 0.25em;
+}
+.password-strength-items{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    font-size:0.75rem;
+}
+.password-strength-items li{
+    display:flex;
+    gap:0.25rem;
+    align-items:center;
+}
+.progress{
+    height:3px !important;
+    width:100%;
+    background:#f1f1f1;
+    border-radius:0.25rem;
+}
+.progress-bar{
+    height: 3px !important;
+    border-radius: 0.25rem;
+}
+.progress-bar-danger{
+    background: #e90f10;
+}
+.progress-bar-warning{
+    background: #ffad00;
+}
+.progress-bar-success{
+    background: #02b502;
+}

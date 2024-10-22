@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* Style for password strength bar */
+        #password-strength {
+            width: 0%;
+            height: 5px;
+            background-color: red;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: lightgray;
+        }
+
+        .valid {
+            color: green;
+        }
+
+        .invalid {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="input_wrapper">
+            <label for="password" class="input_label">Password</label>
+            <input id="password" type="password" class="input_field" placeholder="Your password">
+            <img src="eye.png" alt="eye icon" title="eye icon" class="input_icon" id="eye-icon">
+        </div>
+        <div class="password-strength">
+            <div class="progress">
+                <div id="password-strength" class="progress-bar"></div>
+            </div>
+            <ul class="password-strength-items">
+                <li class="low-upper-case invalid">
+                    <img src="remove.png" alt="ticker" class="input_icon">
+                    &nbsp;Lowercase &amp; Uppercase
+                </li>
+                <li class="number invalid">
+                    <img src="remove.png" alt="ticker" class="input_icon">
+                    &nbsp;Number (0-9)
+                </li>
+                <li class="special-char invalid">
+                    <img src="remove.png" alt="ticker" class="input_icon">
+                    &nbsp;Special Character (!@#$%^&*)
+                </li>
+                <li class="min-char invalid">
+                    <img src="remove.png" alt="ticker" class="input_icon">
+                    &nbsp;At least 8 Characters
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
